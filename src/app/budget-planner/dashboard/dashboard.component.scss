@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(50% - 40px);
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translate(-7px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.icono {
+  transition: transform 0.3s ease;
+}
+
+/* Cuando el ratón pase sobre el icono, aplicar sombra y escala */
+.icono:hover {
+  /* Agrega una sombra negra */
+  transform: scale(1.1); /* Escala el icono al 110% */
+}
+
+/* Define un gradiente lineal que va de plomo a dorado */
+@keyframes cambioColor {
+  0%,
+  100% {
+    fill: #808080; /* Color inicial y final: plomo */
+  }
+  50% {
+    fill: #ffd700; /* Interpolación suave hacia dorado */
+  }
+}
+
+/* Aplica el gradiente al elemento SVG */
+.w-6.h-6 path {
+  animation: cambioColor 2s ease alternate infinite; /* Aplica la animación bidireccional de cambio de color con duración de 2 segundos, suavidad y en bucle */
+}
+
+.button:hover {
+  background-color: #45a049; /* Color de fondo del botón al pasar el ratón */
+}
+
+.transaction-status mat-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  color: #4caf50;
+}
+
+.transaction-details.completed {
+  text-decoration: line-through;
+}
+
+.mat-icon {
+  font-size: 24px;
+  color: #f9f9f9;
+}
+.button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4caf50;
+  text-align: center; /* Alinea el texto en el centro */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  border-radius: 5px; /* Agrega bordes redondeados al botón */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+.total-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.total-line {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.total-item p {
+  margin-left: 35px; /* Ajusta el espacio entre el dinero y el nombre */
+}
